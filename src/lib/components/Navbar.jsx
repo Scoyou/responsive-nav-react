@@ -20,7 +20,9 @@ const Navbar = ({ navTitle, menuIcon, iconHeight, iconWidth }) => {
   return (
     <div className={colorChange ? "navbar colorChange" : "navbar"}>
       {showCollapsedNav && (
-        <CollapsedNav setShowCollapsedNav={setShowCollapsedNav} />
+        <CollapsedNav setShowCollapsedNav={setShowCollapsedNav}>
+          {children}
+        </CollapsedNav>
       )}
       <span className="nav-title">{navTitle}</span>
       {width < 600 ? (
@@ -33,7 +35,7 @@ const Navbar = ({ navTitle, menuIcon, iconHeight, iconWidth }) => {
           width={iconWidth}
         />
       ) : (
-        <>{...children}</>
+        <>{children}</>
       )}
     </div>
   );

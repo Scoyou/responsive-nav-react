@@ -17,7 +17,7 @@ const CollapsedNav = ({
         height={iconHeight}
         width={iconWidth}
       />
-      {...children}
+      {children}
     </div>
   );
 };
